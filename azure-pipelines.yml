@@ -28,7 +28,10 @@ steps:
 #     platform: '$(buildPlatform)'
 #     configuration: '$(buildConfiguration)'
 
-    
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '6.x'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
